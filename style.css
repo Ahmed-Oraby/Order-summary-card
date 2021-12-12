@@ -1,3 +1,4 @@
+/* set box-sizing to border-box */
 *,
 *::after,
 *::before {
@@ -6,6 +7,7 @@
     padding: 0;
 }
 
+/* set default colors variables */
 :root {
     --color-paleblue: hsl(225, 100%, 94%);
     --color-brightblue: hsl(245, 75%, 52%);
@@ -14,19 +16,140 @@
     --color-darkblue: hsl(223, 47%, 23%);
 }
 
+/* set root font to be 62.5% => 1rem = 10px */
 html {
     font-size: 62.5%;
 }
 
+/* set font family and size */
 body {
     font-family: "Red Hat Display", sans-serif;
     font-size: 1.6rem;
-    line-height: 1.5rem;
+    line-height: 1.5;
+    word-spacing: 0.15rem;
+}
+
+/* container styles */
+.container {
+    background-image: url(images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 10rem 2rem;
+}
+
+/* button styles */
+.btn {
+    display: inline-block;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 2.5rem;
+    font-weight: 700;
+}
+
+.btn-block {
+    width: 100%;
+    padding: 1.5rem;
+}
+
+.btn-blue {
+    background-color: var(--color-brightblue);
+    color: white;
+}
+
+.btn-white {
+    background-color: #fff;
+    color: var(--color-desaturated-blue);
+}
+
+.btn-blue:hover {
+    background-color: hsla(245, 75%, 52%, 0.7);
+}
+
+.btn-white:hover {
+    color: var(--color-darkblue);
+}
+
+/* card styles */
+.card {
+    max-width: 375px;
+    margin: 5rem auto;
+    background-color: #fff;
+    /* box-shadow: 0 0 20px 20px hsl(225, 100%, 94%); */
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.card__image img {
+    width: 100%;
+}
+
+.card__header {
+    padding: 0 3rem;
+}
+
+.card__title {
+    font-size: 2.2rem;
+    color: var(--color-darkblue);
+    font-weight: 900;
+}
+
+.card__text {
+    color: var(--color-desaturated-blue);
+}
+
+.card__body {
+    padding: 3rem;
+}
+
+.card__plan {
+    background-color: var(--color-very-baleblue);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.7rem;
+}
+
+.plan {
+    display: flex;
+}
+
+.plan__title {
+    font-size: 1.6rem;
+    color: var(--color-darkblue);
+    font-weight: 700;
+}
+
+.plan__fee {
+    margin-left: 2rem;
+}
+
+.plan__text {
+    font-size: 1.4rem;
+    color: var(--color-desaturated-blue);
+}
+
+.card__plan a {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--color-brightblue);
+}
+
+.card__plan a:hover {
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+/* attribution styles */
+footer {
+    padding: 2rem;
 }
 
 .attribution {
     text-align: center;
-    font-weight: 400;
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
