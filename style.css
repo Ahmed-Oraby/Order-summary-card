@@ -1,3 +1,29 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-paleblue: hsl(225, 100%, 94%);
+    --color-brightblue: hsl(245, 75%, 52%);
+    --color-very-baleblue: hsl(225, 100%, 98%);
+    --color-desaturated-blue: hsl(224, 23%, 55%);
+    --color-darkblue: hsl(223, 47%, 23%);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5rem;
+}
+
 .attribution {
     text-align: center;
     font-weight: 400;
